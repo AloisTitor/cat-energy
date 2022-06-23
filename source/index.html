@@ -105,16 +105,78 @@
             Отличный результат без изнуряющих тренировок!
             При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="example__evidence">
-
+          <dl class="example__stats stats">
+            <div class="stats__item">
+              <dt class="stats__term">
+                снижение веса
+              </dt>
+              <dd class="stats__description">
+                5 кг
+              </dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__term">
+                затрачено времени
+              </dt>
+              <dd class="stats__description">
+                60 дней
+              </dd>
+            </div>
+          </dl>
+          <span class="example__commentar">Затраты на питание: 15 000 РУБ.</span>
+        </div>
+        <div class="examle__slider slider">
+          <img class="slider__item slider__item--thin" src="" alt="Худой котик" />
+          <img class="slider__item slider__item--fat" src="" alt="Полный котик" />
+          <div class="slider__control-bar">
+            <span class="slider__legend">было</span>
+            <label class="slider__controler">
+              <input type="range" name="price-range" min="0" max="1000" value="500" step="10">
+            </label>
+            <spam class="slider__legend">стало</spam>
           </div>
         </div>
-        <div class="example_slider">
-
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Карта</h3>
+        <div class="map__info">
+          <span class="map__title">приглашаем к сотрудничеству дилеров!</span>
+          <p class="map__adres">ул. Большая Конюшенная, д. 19/8
+            <br />Санкт-Петербург
+          </p>
+        </div>
+        <div class="map__wrapper">
+          <iframe class="map__inner" src="https://yandex.ru/map-widget/v1/-/CCUBi6BjKC"></iframe>
         </div>
       </section>
-
     </main>
+    <footer class="page-footer">
+      <a class="page-footer__logo">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи" />
+      </a>
+      <ul class="page-footer__social social">
+        <h2 class="visually-hidden">Давайте дружить!</h3>
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/">
+            Мы в Вконтакте
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/">
+            Мы в Инстаграм
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/">
+            Мы в Фейсбук
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__copyrights copyrights">
+        <span class="copyrights__title">HTML Academy</span>
+        <img class="copyrights__link" src="img/htmlacademy.svg" width="27" height="34" alt="Разработчик" />
+      </a>
+    </footer>
 
   </body>
 </html>
