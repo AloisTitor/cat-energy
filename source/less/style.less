@@ -1,4 +1,124 @@
-@import "content.less";
-@import "page.less";
-@import "page-header.less";
-@import "main-nav.less";
+// @import("global/variables.less");
+
+// Colors
+
+// Viewports
+
+@mobole-width-only: 767px;
+@tablet-width: 768px;
+@desktop-width: 1200px;
+
+// @import("global/fonts.less");
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src:
+    url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: medium;
+  font-display: swap;
+  src:
+    url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
+}
+
+// @import ("global/global.less");
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// @import ("blocks/page.less");
+
+.page {
+  height: 100%;
+  font-family: "Arial", "sans-serif";
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page__body {
+  min-height: 100%;
+  min-width: 320px;
+  margin: 0;
+  background-color: #FFFFFF;
+  color: #444444;
+}
+
+// @import ("blocks/page-header.less");
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Oswald", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media (max-width: @mobole-width-only) {
+    flex-direction: column;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.page-header__logo {
+}
+
+.page-header__toggle {
+  min-width: 90px;
+}
+
+.page-header__list {
+  padding: 0px;
+  margin: 0px;
+}
+
+// @import ("blocks/site-list.less");
+
+.site-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.site-list__item {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
