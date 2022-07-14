@@ -4,7 +4,7 @@
 
 // Viewports
 
-@mobole-width-only: 767px;
+@mobile-width-only: 767px;
 @tablet-width: 768px;
 @desktop-width: 1200px;
 
@@ -60,7 +60,7 @@ img {
 
 .page__body {
   min-height: 100%;
-  min-width: 320px;
+  min-width: 280px;
   margin: 0;
   background-color: #FFFFFF;
   color: #444444;
@@ -80,7 +80,8 @@ img {
   text-transform: uppercase;
   color: #000000;
 
-  @media (max-width: @mobole-width-only) {
+  @media (max-width: @mobile-width-only) {
+    padding-top: 10px;
     flex-direction: column;
   }
 }
@@ -89,18 +90,85 @@ img {
   display: flex;
   justify-content: center;
   height: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E6E6E6;
+  }
 }
 
 .page-header__logo {
 }
 
 .page-header__toggle {
-  min-width: 90px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-left: 66px;
+  width: 24px;
+  background: rgba(0, 0, 0, 0);
 }
+
+.page-header__toggle > span,
+.page-header__toggle > span::before,
+.page-header__toggle > span::after {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+}
+.page-header__toggle > span::before {
+  content: '';
+  top: -8px;
+}
+.page-header__toggle > span::after {
+  content: '';
+  top: 8px;
+}
+
+.page-header__toggle:active > span {
+  transform: rotate(45deg);
+}
+.page-header__toggle:active > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+.page-header__toggle:active > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
 
 .page-header__list {
   padding: 0px;
   margin: 0px;
+}
+
+// @import ("blocks/page-main.less");
+
+.page-main {
+  margin: 0px;
+}
+
+.page-main__wrapper {
+  background-image: url(../img/index-background-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.page-main__title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+
+  &--small {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 // @import ("blocks/site-list.less");
@@ -121,4 +189,9 @@ img {
   display: flex;
   justify-content: center;
   height: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 22px;
+    border-bottom: 1px solid #E6E6E6;
+  }
 }
