@@ -109,66 +109,37 @@ img {
   background: rgba(0, 0, 0, 0);
 }
 
-.page-header__toggle > span,
-.page-header__toggle > span::before,
-.page-header__toggle > span::after {
+.page-header__toggle--closed span {
   display: block;
   position: absolute;
   width: 24px;
   height: 2px;
   background-color: #000000;
-}
-.page-header__toggle > span::before {
-  content: '';
-  top: -8px;
-}
-.page-header__toggle > span::after {
-  content: '';
-  top: 8px;
+  box-shadow: 0 8px #000000, 0 -8px #000000;
 }
 
-.page-header__toggle:active > span {
-  transform: rotate(45deg);
-}
-.page-header__toggle:active > span::before {
-  top: 0;
-  transform: rotate(0);
-}
-.page-header__toggle:active > span::after {
-  top: 0;
-  transform: rotate(90deg);
+.page-header__toggle--opened span {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 
 .page-header__list {
   padding: 0px;
   margin: 0px;
-}
-
-// @import ("blocks/page-main.less");
-
-.page-main {
-  margin: 0px;
-}
-
-.page-main__wrapper {
-  background-image: url(../img/index-background-mobile@1x.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.page-main__title {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  text-align: center;
-
-  &--small {
-    font-size: 14px;
-    line-height: 14px;
-  }
 }
 
 // @import ("blocks/site-list.less");
@@ -192,6 +163,45 @@ img {
 
   @media (max-width: @mobile-width-only) {
     padding: 22px;
-    border-bottom: 1px solid #E6E6E6;
+    border-bottom: 2px solid #E6E6E6;
+  }
+}
+
+// @import ("blocks/page-main.less");
+
+.page-main {
+  margin: 0px;
+}
+
+// @import ("blocks/promo.less");
+
+.promo__background {
+  position: absolute;
+  z-index: -1;
+  height: 305px;
+  width: 100%;
+  background: #65A93C url(../img/index-background-mobile@1x.jpg) no-repeat center;
+}
+
+.promo__wrapper {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.promo__title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFFFFF;
+
+  &--small {
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
   }
 }
