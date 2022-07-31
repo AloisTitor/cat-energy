@@ -296,13 +296,15 @@ img {
 }
 
 .capabilitys__item {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   margin: 20px;
   padding: 20px;
   background-color: @basic_grey;
 }
 
 .capabilitys__title {
+  margin: 7px;
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
@@ -314,7 +316,8 @@ img {
 
 .capabilitys__description {
   width: 100%;
-  padding-bottom: 18px;
+  margin-top: 20px;
+  padding-bottom: 23px;
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
@@ -325,6 +328,7 @@ img {
 }
 
 .capabilitys__button{
+  margin-top: 7px;
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
@@ -336,6 +340,100 @@ img {
   color: @basic-black;
 }
 
-.capabilitys__picture {
+.capabilitys__picture-conteiner {
   order: -1;
+  margin-left: -8px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+    margin-left: 10px;
+    border-radius: 60px;
+    background: @basic_green-2;
+    content: "";
+  }
+}
+.capabilitys__picture {
+  position: relative;
+  width: 70px;
+  height: 50px;
+}
+
+// @advantages ("blocks/advantages.less");
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding-bottom: 10px;
+}
+
+.advantages__header {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: left;
+}
+
+.advantages__item {
+  display: flex;
+  margin: 10px 0;
+}
+
+.advantages__picture {
+  object-fit:cover;
+  height: 100%;
+  padding: 5px;
+  background: @basic_green-2;
+}
+
+.advantages__description {
+  margin: 0;
+  margin-left: 20px;
+}
+
+// @example ("blocks/example.less");
+
+.example {
+  padding: 20px;
+  background: @basic_grey;
+}
+
+.example__wrapper {
+}
+
+.example__title {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: left;
+}
+
+.example__descriotion {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.example__stats {
+
+}
+
+// @stats ("blocks/stats.less");
+
+.stats {
+
 }
