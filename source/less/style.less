@@ -432,8 +432,150 @@ img {
 
 }
 
+.example__commentar {
+  display: block;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @basic-black;
+}
+
+.examle__slider {
+
+}
+
 // @stats ("blocks/stats.less");
 
 .stats {
+  display: flex;
+  justify-content: space-between;
+}
 
+.stats__item {
+  margin-top: 15px;
+  padding-bottom: 20px;
+}
+
+.stats__term {
+  position: absolute;
+  display: flex;
+  max-width: 80px;
+  margin-top: 47px;
+  margin-left: 22px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: @special_dark-grey;
+  background: @basic_grey;
+}
+
+.stats__description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-width: 122px;
+  min-height: 54px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @basic-black;
+  border: solid 1px @special_grey;
+  border-radius: 2px;
+}
+
+// @slider ("blocks/slider.less");
+
+.slider {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: auto;
+}
+
+.slider__container {
+  align-self: center;
+  width: 311px;
+  height: 232px;
+  background: url(../img/before-mobile@1x.png) no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background: url(../img/before-mobile@2x.png) no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    background: url(../img/before-tablet@1x.png) no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url(../img/before-tablet@2x.png) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url(../img/before-desktop@1x.png) no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url(../img/before-desktop@1x.png) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  div {
+    box-sizing: border-box;
+    height: 100%;
+    width: 10%;
+    max-width: 99%;
+    resize: horizontal;
+    overflow: auto;
+    position: relative;
+    background: @basic_grey url(../img/after-mobile@1x.png) no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: @basic_grey url(../img/after-mobile@2x.png) no-repeat;
+      background-size: cover;
+    }
+
+    @media (min-width: @tablet-width) {
+      background: @basic_grey url(../img/after-tablet@1x.png) no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: @basic_grey url(../img/after-tablet@2x.png) no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      background: @basic_grey url(../img/after-desktop@1x.png) no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: @basic_grey url(../img/after-desktop@1x.png) no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.slider__control-bar {
+  align-self: center;
 }
