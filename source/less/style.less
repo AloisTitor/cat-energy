@@ -135,6 +135,30 @@ img {
   }
 }
 
+.page-header__logo-1 {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-2 {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}
+
 .page-header__toggle {
   margin: 0;
   padding: 0;
